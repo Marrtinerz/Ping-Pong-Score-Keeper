@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e018983b5d.js" crossorigin="anonymous"></script>
+
+    <!-- Custom css -->
+    <link rel="stylesheet" href="Styles/app.css">
+
+    <title>Ping-Pong-Score Keeper</title>
+</head>
+
+<body>
+    <main id="container">
+        <div class="overlay">
+            <h1>Ping Pong <br> Score Keeper</h1>
+        </div>
+        <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
+            alt="Ping_pong image" width="100%" height="50%">
+        <section id="dataentry" class="">
+            <form action="#Nowhere">
+                <div class="box">
+                    <label for="playerone">Player 1</label>
+                    <input type="text" id="playerone" placeholder="Enter name" name="playeronename" required>
+                </div>
+                <div class="box">
+                    <label for="playertwo">Player 2</label>
+                    <input type="text" id="playertwo" placeholder="Enter name" name="playertwoname" required>
+                </div>
+                <div class="box">
+                    <label for="rounds">How many rounds?</label>
+                    <select name="roundnum" id="rounds" required>
+                        <option value="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                    </select>
+                </div>
+                <button type="submit" class="next"><i class="fa-solid fa-angle-right"></i></button>
+            </form>
+        </section>
+        <section id="scoring" class="hide">
+            <h1 id="score"><span id="scoreone">0</span> to <span id="scoretwo">0</span></h1>
+            <h2>Playing for <span id="roundno">X</span> rounds</h2>
+            <h3>Use the buttons below to keep the score</h3>
+            <div id="btncontainer">
+                <button id="playeroneplus" class="btn btn-one">+1 <span id="p_onename">Player one</span></button>
+                <button id="playertwoplus" class="btn btn-two">+1 <span id="p_twoname">Player two</span></button>
+                <button id="reset" class="btn btn-reset">Change Player Name</button>
+            </div>
+        </section>
+        <section id="winner" class="hide">
+            <h1>Hurray!!!</h1>
+            <h2><span id="winnername">Player 1</span> wins</h2>
+            <button id="initial" class="btn btn-reset two"><a href="index.html">Play again</a></button>
+            <button id="finish" class="btn btn-end">End game</button>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
